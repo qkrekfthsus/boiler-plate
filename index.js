@@ -69,7 +69,7 @@ app.post('/api/users/login', (req, res) => {
 	});
 });
 
-app.get('api/users/auth', auth, (req, res) => {
+app.get('/api/users/auth', auth, (req, res) => {
 	// middleware auth가 실행되고 여기까지 왔다면 인증 성공
 	res.status(200).json({
 		_id: req.user._id,
@@ -82,8 +82,9 @@ app.get('api/users/auth', auth, (req, res) => {
 		role: req.user.role,
 		image: req.user.image
 	});
-
 });
+
+app.get('')
 
 
 app.listen(port, () => {
